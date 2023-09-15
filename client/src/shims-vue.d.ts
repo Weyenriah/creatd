@@ -1,0 +1,1 @@
+declare module '*.vue'; // To stop TypeScript from complaining about .vue files
