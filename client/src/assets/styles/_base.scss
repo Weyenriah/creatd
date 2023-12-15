@@ -1,3 +1,89 @@
+@import 'variables';
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, label, input, span, textarea, blockquote {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.project-rendering p {
+    margin: 0;
+}
+
+.main-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+blockquote {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: $primary;
+    border-left: 10px solid rgba($secondary, .2);
+}
+
+code {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    background-color: $primary;
+    border-radius: $border-radius-10;
+}
+
+
+.input-with-button {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    border: 1px solid $secondary;
+    border-radius: $border-radius;
+    padding: rem(7) rem(10) rem(7) rem(15);
+
+    &__input {
+        width: 100%;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__button {
+        height: rem(42);
+        width: rem(46);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        border-radius: $border-radius;
+        transition: $transition;
+
+        img {
+            height: rem(22);
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $primary;
+        }
+    }
+}
+
+.is-empty {
+    opacity: .5;
 }

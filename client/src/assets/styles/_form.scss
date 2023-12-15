@@ -1,0 +1,16 @@
+@import 'helpers';
+@import 'variables';
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: rem(6);
+
+    input {
+        padding: rem(10) rem(15);
+        border-radius: $border-radius;
+        border: 2px solid $secondary;
+        transition: $transition;
+        font-size: rem(16);
+    }
+}

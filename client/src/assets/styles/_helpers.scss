@@ -1,0 +1,29 @@
+// From PX to Rem calculation (16px = 1rem)
+@function rem($px) {
+  @return calc(($px / 16) * 1rem);
+}
+
+// Responsiveness
+@mixin large-up {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin medium-up {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin small-up {
+    @media (min-width: 320px) {
+        @content;
+    }
+}
+
+@mixin xsmall-up {
+    @media (min-width: 300px) {
+        @content;
+    }
+}

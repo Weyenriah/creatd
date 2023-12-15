@@ -1,0 +1,81 @@
+@import 'variables';
+@import 'helpers';
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(10);
+    width: fit-content;
+    border-radius: $border-radius;
+    padding: rem(8) rem(16);
+    font-size: rem(12);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: $transition;
+    cursor: pointer;
+
+    &--bigger {
+        width: 100%;
+        font-size: rem(14);
+        padding: rem(14) rem(18);
+    }
+
+    &--prominent {
+        padding: rem(16) rem(24);
+    }
+
+    &--solid {
+        background-color: $secondary;
+        color: $white;
+
+        img {
+            filter: $to-white;
+        }
+
+        &:hover {
+            background-color: lighten($secondary, 15%);
+        }
+    }
+
+    &--outline {
+        border: 2px solid $secondary;
+        color: $secondary;
+        background-color: $white;
+
+        &:hover {
+            background-color: $secondary;
+            color: $white;
+
+            img {
+                filter: $to-white;
+            }
+        }
+    }
+
+    img {
+        width: rem(16);
+        height: rem(16);
+        transition: $transition;
+    }
+}
+
+.link {
+    padding: rem(7) rem(15);
+    border-radius: $border-radius;
+    color: $secondary;
+    text-decoration: none;
+    font-size: rem(14);
+    font-weight: 600;
+    transition: $transition;
+
+    &:hover, &.router-link-active {
+        background-color: $primary;
+    }
+
+    &--bigger {
+        font-size: rem(16);
+        padding: rem(10) rem(17);
+    }
+}
